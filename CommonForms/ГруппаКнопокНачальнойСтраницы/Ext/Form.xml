@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<Height>3</Height>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Popup name="УченикиИРодители" id="17">
+				<Title>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Ученики и родители</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Ученики и родители</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Picture>
+					<xr:Ref>StdPicture.BusinessProcess</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Representation>PictureAndText</Representation>
+				<ExtendedTooltip name="УченикиИРодителиРасширеннаяПодсказка" id="18"/>
+				<ChildItems>
+					<Button name="СписокОбучающихся" id="1">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.СписокОбучающихся</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.User</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="СписокОбучающихсяРасширеннаяПодсказка" id="2"/>
+					</Button>
+					<Button name="ФормаСписокРодителей" id="19">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.СписокРодителей</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.ActiveUsers</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаСписокРодителейРасширеннаяПодсказка" id="20"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+			<Button name="Успеваемость" id="3">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.Успеваемость</CommandName>
+				<Picture>
+					<xr:Ref>0:87d032df-0956-47e9-bead-4e15330f1983</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="УспеваемостьРасширеннаяПодсказка" id="4"/>
+			</Button>
+			<Button name="СписокЗанятий" id="7">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.СписокЗанятий</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.Calendar</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="СписокЗанятийРасширеннаяПодсказка" id="8"/>
+			</Button>
+			<Button name="ФормаТемыЗанятий" id="13">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ТемыЗанятий</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.DocumentJournal</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаТемыЗанятийРасширеннаяПодсказка" id="14"/>
+			</Button>
+			<Button name="ФормаТемыПоУчебинкам" id="15">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ТемыПоУчебинкам</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.SetDateInterval</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаТемыПоУчебинкамРасширеннаяПодсказка" id="16"/>
+			</Button>
+			<Popup name="ГрОтчеты" id="25">
+				<Title>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Отчеты</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Гр отчеты</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Picture>
+					<xr:Ref>StdPicture.Report</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ГрОтчетыРасширеннаяПодсказка" id="26"/>
+				<ChildItems>
+					<Button name="ФормаГрафикЗанятий" id="27">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ГрафикЗанятий</CommandName>
+						<ExtendedTooltip name="ФормаГрафикЗанятийРасширеннаяПодсказка" id="28"/>
+					</Button>
+					<Button name="ФормаПродажи" id="31">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Продажи</CommandName>
+						<ExtendedTooltip name="ФормаПродажиРасширеннаяПодсказка" id="32"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+			<Popup name="грАдминистрирование" id="9">
+				<Title>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Администрирование</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Гр администрирование</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="грАдминистрированиеРасширеннаяПодсказка" id="10"/>
+				<ChildItems>
+					<Button name="ФормаУстановкаЦенЗанятий" id="23">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УстановкаЦенЗанятий</CommandName>
+						<ExtendedTooltip name="ФормаУстановкаЦенЗанятийРасширеннаяПодсказка" id="24"/>
+					</Button>
+					<Button name="ФормаПользователи" id="21">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Пользователи</CommandName>
+						<ExtendedTooltip name="ФормаПользователиРасширеннаяПодсказка" id="22"/>
+					</Button>
+					<Button name="ФормаКонсольЗапросов" id="11">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КонсольЗапросов</CommandName>
+						<ExtendedTooltip name="ФормаКонсольЗапросовРасширеннаяПодсказка" id="12"/>
+					</Button>
+					<Button name="ФормаНастройкаСистемы" id="35">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.НастройкаСистемы</CommandName>
+						<ExtendedTooltip name="ФормаНастройкаСистемыРасширеннаяПодсказка" id="36"/>
+					</Button>
+					<Button name="ФормаПанельАдминистратора" id="29">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПанельАдминистратора</CommandName>
+						<ExtendedTooltip name="ФормаПанельАдминистратораРасширеннаяПодсказка" id="30"/>
+					</Button>
+					<Button name="ФормаСписокПросроченныхЗанятий" id="33">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СписокПросроченныхЗанятий</CommandName>
+						<ExtendedTooltip name="ФормаСписокПросроченныхЗанятийРасширеннаяПодсказка" id="34"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Attributes/>
+	<Commands>
+		<Command name="СписокОбучающихся" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Список обучающихся</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Список обучающихся</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СписокОбучающихся</Action>
+		</Command>
+		<Command name="Успеваемость" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Успеваемость</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Успеваемость</v8:content>
+				</v8:item>
+			</ToolTip>
+		</Command>
+		<Command name="СписокЗанятий" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Список занятий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Список занятий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СписокЗанятий</Action>
+		</Command>
+		<Command name="КонсольЗапросов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Консоль запросов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Консоль запросов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КонсольЗапросов</Action>
+		</Command>
+		<Command name="ТемыЗанятий" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Темы занятий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Темы занятий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТемыЗанятий</Action>
+		</Command>
+		<Command name="ТемыПоУчебинкам" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Темы по учебинкам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Темы по учебинкам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТемыПоУчебинкам</Action>
+		</Command>
+		<Command name="СписокРодителей" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Список родителей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Список родителей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СписокРодителей</Action>
+		</Command>
+		<Command name="Пользователи" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Пользователи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Пользователи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Пользователи</Action>
+		</Command>
+		<Command name="УстановкаЦенЗанятий" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Установка цен занятий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Установка цен занятий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановкаЦенЗанятий</Action>
+		</Command>
+		<Command name="ГрафикЗанятий" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>График занятий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>График занятий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ГрафикЗанятий</Action>
+		</Command>
+		<Command name="ПанельАдминистратора" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Панель администратора</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Панель администратора</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПанельАдминистратора</Action>
+		</Command>
+		<Command name="Продажи" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Продажи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Продажи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Продажи</Action>
+		</Command>
+		<Command name="СписокПросроченныхЗанятий" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Список просроченных занятий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Список просроченных занятий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СписокПросроченныхЗанятий</Action>
+		</Command>
+		<Command name="НастройкаСистемы" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Настройка системы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Настройка системы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкаСистемы</Action>
+		</Command>
+	</Commands>
+</Form>

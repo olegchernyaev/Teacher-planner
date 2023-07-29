@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<UsualGroup name="грОтбор" id="52">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Гр отбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Гр отбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="грОтборРасширеннаяПодсказка" id="53"/>
+			<ChildItems>
+				<InputField name="ОбучающийсяФильтр" id="49">
+					<DataPath>Обучающийся</DataPath>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="ОбучающийсяФильтрКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ОбучающийсяФильтрРасширеннаяПодсказка" id="51"/>
+					<Events>
+						<Event name="OnChange">ОбучающийсяФильтрПриИзменении</Event>
+					</Events>
+				</InputField>
+				<CheckBoxField name="ТолькоБудущие" id="54">
+					<DataPath>ТолькоБудущие</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТолькоБудущиеКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="ТолькоБудущиеРасширеннаяПодсказка" id="56"/>
+					<Events>
+						<Event name="OnChange">ТолькоБудущиеПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5"/>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Занятие" id="19">
+					<DataPath>Список.Занятие</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="ЗанятиеКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ЗанятиеРасширеннаяПодсказка" id="21"/>
+				</LabelField>
+				<LabelField name="СтатусЗанятия" id="46">
+					<DataPath>Список.СтатусЗанятия</DataPath>
+					<ContextMenu name="СтатусЗанятияКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="СтатусЗанятияРасширеннаяПодсказка" id="48"/>
+				</LabelField>
+				<LabelField name="Дата" id="37">
+					<DataPath>Список.Дата</DataPath>
+					<Format>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ='ddd. dd MMMM HH:mm'</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="39"/>
+				</LabelField>
+				<LabelField name="Обучающийся" id="25">
+					<DataPath>Список.Обучающийся</DataPath>
+					<ContextMenu name="ОбучающийсяКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ОбучающийсяРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<LabelField name="Дисциплина" id="16">
+					<DataPath>Список.Дисциплина</DataPath>
+					<ContextMenu name="ДисциплинаКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ДисциплинаРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+				<LabelField name="КоличествоЧасов" id="22">
+					<DataPath>~Список.КоличествоЧасов</DataPath>
+					<ContextMenu name="КоличествоЧасовКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="КоличествоЧасовРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<LabelField name="ТемаПоУчебнику" id="31">
+					<DataPath>Список.ТемаПоУчебнику</DataPath>
+					<ContextMenu name="ТемаПоУчебникуКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ТемаПоУчебникуРасширеннаяПодсказка" id="33"/>
+				</LabelField>
+				<LabelField name="ТемаПреподавателя" id="34">
+					<DataPath>Список.ТемаПреподавателя</DataPath>
+					<Height>5</Height>
+					<ContextMenu name="ТемаПреподавателяКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ТемаПреподавателяРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+				<LabelField name="Примечание" id="28">
+					<DataPath>~Список.Примечание</DataPath>
+					<ContextMenu name="ПримечаниеКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ПримечаниеРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+				<LabelField name="ДомашнееЗадание" id="43">
+					<DataPath>Список.ДомашнееЗадание</DataPath>
+					<ContextMenu name="ДомашнееЗаданиеКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ДомашнееЗаданиеРасширеннаяПодсказка" id="45"/>
+				</LabelField>
+				<LabelField name="Оценка" id="40">
+					<DataPath>Список.Оценка</DataPath>
+					<ContextMenu name="ОценкаКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ОценкаРасширеннаяПодсказка" id="42"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Занятия.Ссылка КАК Занятие,
+	РасписаниеЗанятий.Период КАК Дата,
+	РасписаниеЗанятий.Обучающийся,
+	ЕСТЬNULL(СтатусыЗанятий.СтатусЗанятия, ЗНАЧЕНИЕ(Перечисление.СтатусыЗанятий.НеПодтверждено)) КАК СтатусЗанятия,
+	РасписаниеЗанятий.Дисциплина,
+	РасписаниеЗанятий.Длительность,
+	РасписаниеЗанятий.ТемаПреподавателя,
+	РасписаниеЗанятий.ТемаПоУчебнику,
+	РасписаниеЗанятий.Замечание,
+	РасписаниеЗанятий.Оценка,
+	РасписаниеЗанятий.ДомашнееЗадание
+ИЗ
+	Документ.Занятия КАК Занятия
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.РасписаниеЗанятий КАК РасписаниеЗанятий
+		ПО (РасписаниеЗанятий.Регистратор = Занятия.Ссылка)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СтатусыЗанятий КАК СтатусыЗанятий
+		ПО (СтатусыЗанятий.Занятие = Занятия.Ссылка)</QueryText>
+				<MainTable>Document.Занятия</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Дата</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Обучающийся" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Обучающийся</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Обучающиеся</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастоящееВремя" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Настоящее время</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТолькоБудущие" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Только будущие</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Список</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.СтатусЗанятия</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыЗанятий.Отменено</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#E6E6E6</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Список</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.СтатусЗанятия</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыЗанятий.Подтверждено</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#FDFFAA</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Список</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.СтатусЗанятия</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыЗанятий.НеПодтверждено</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:MistyRose</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Список</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.СтатусЗанятия</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыЗанятий.Проведено</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:HoneyDew</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Список</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.СтатусЗанятия</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыЗанятий.Перенесено</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Gainsboro</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+</Form>

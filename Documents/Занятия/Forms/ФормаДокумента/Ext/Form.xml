@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Popup name="грСтатусЗанятия" id="66">
+				<Title>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Статус занятия</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Гр статус занятия</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="грСтатусЗанятияРасширеннаяПодсказка" id="67"/>
+				<ChildItems>
+					<Button name="Подтвердить" id="58">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Подтвердить</CommandName>
+						<BackColor>web:HoneyDew</BackColor>
+						<ExtendedTooltip name="ПодтвердитьРасширеннаяПодсказка" id="59"/>
+					</Button>
+					<Button name="Отменить" id="60">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Отменить</CommandName>
+						<BackColor>web:MistyRose</BackColor>
+						<ExtendedTooltip name="ОтменитьРасширеннаяПодсказка" id="61"/>
+					</Button>
+					<ButtonGroup name="ФормаГруппа1" id="74">
+						<ExtendedTooltip name="ФормаГруппа1РасширеннаяПодсказка" id="75"/>
+						<ChildItems>
+							<Button name="ФормаПроведено" id="76">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Проведено</CommandName>
+								<ExtendedTooltip name="ФормаПроведеноРасширеннаяПодсказка" id="77"/>
+							</Button>
+							<Button name="ФормаОплачено" id="104">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Оплачено</CommandName>
+								<ExtendedTooltip name="ФормаОплаченоРасширеннаяПодсказка" id="105"/>
+							</Button>
+							<Button name="ФормаПроведеноИОплачено" id="106">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПроведеноИОплачено</CommandName>
+								<ExtendedTooltip name="ФормаПроведеноИОплаченоРасширеннаяПодсказка" id="107"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+				</ChildItems>
+			</Popup>
+			<Button name="ФормаПовторитьЗанятие" id="102">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПовторитьЗанятие</CommandName>
+				<ExtendedTooltip name="ФормаПовторитьЗанятиеРасширеннаяПодсказка" id="103"/>
+			</Button>
+			<Button name="ФормаЗанятия" id="108">
+				<Type>CommandBarHyperlink</Type>
+				<CommandName>Form.Command.Занятия</CommandName>
+				<ExtendedTooltip name="ФормаЗанятияРасширеннаяПодсказка" id="109"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГрОсновная" id="91">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Гр основная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Гр основная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГрОсновнаяРасширеннаяПодсказка" id="92"/>
+			<ChildItems>
+				<UsualGroup name="грЛево" id="87">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Гр лево</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Гр лево</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ChildrenAlign>ItemsLeftTitlesLeft</ChildrenAlign>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="грЛевоРасширеннаяПодсказка" id="88"/>
+					<ChildItems>
+						<UsualGroup name="ГрСтатус" id="64">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Гр статус</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Гр статус</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГрСтатусРасширеннаяПодсказка" id="65"/>
+							<ChildItems>
+								<LabelDecoration name="СтатусЗанятия" id="55">
+									<TextColor>web:Crimson</TextColor>
+									<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Не подтверждено</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СтатусЗанятияКонтекстноеМеню" id="56"/>
+									<ExtendedTooltip name="СтатусЗанятияРасширеннаяПодсказка" id="57"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="грГоризонтально" id="53">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Гр горизонтально</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Гр горизонтально</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="грГоризонтальноРасширеннаяПодсказка" id="54"/>
+							<ChildItems>
+								<InputField name="Дата" id="4">
+									<DataPath>Объект.Date</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>ДФ='dd.MM.yyyy HH:mm'</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+								</InputField>
+								<CheckBoxField name="ИндивидуальноеЗанятие" id="50">
+									<DataPath>Объект.ИндивидуальноеЗанятие</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИндивидуальноеЗанятиеКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="ИндивидуальноеЗанятиеРасширеннаяПодсказка" id="52"/>
+								</CheckBoxField>
+								<InputField name="Номер" id="1">
+									<DataPath>Объект.Number</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Преподаватель" id="96">
+							<DataPath>Объект.Преподаватель</DataPath>
+							<ContextMenu name="ПреподавательКонтекстноеМеню" id="97"/>
+							<ExtendedTooltip name="ПреподавательРасширеннаяПодсказка" id="98"/>
+						</InputField>
+						<InputField name="Дисциплина" id="93">
+							<DataPath>Объект.Дисциплина</DataPath>
+							<ContextMenu name="ДисциплинаКонтекстноеМеню" id="94"/>
+							<ExtendedTooltip name="ДисциплинаРасширеннаяПодсказка" id="95"/>
+						</InputField>
+						<InputField name="ТемаУрока" id="10">
+							<DataPath>Объект.ТемаПреподователя</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Тема урока</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТемаУрокаКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ТемаУрокаРасширеннаяПодсказка" id="12"/>
+							<Events>
+								<Event name="Opening">ТемаУрокаОткрытие</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТемаПоУчебнику" id="13">
+							<DataPath>Объект.ТемаПоУчебнику</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТемаПоУчебникуКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ТемаПоУчебникуРасширеннаяПодсказка" id="15"/>
+							<Events>
+								<Event name="Opening">ТемаПоУчебникуОткрытие</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="грПраво" id="89">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Гр право</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Гр право</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ChildrenAlign>ItemsRightTitlesRight</ChildrenAlign>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="грПравоРасширеннаяПодсказка" id="90"/>
+					<ChildItems>
+						<InputField name="ДомашнееЗадание" id="84">
+							<DataPath>Объект.ДомашнееЗадание</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ДомашнееЗаданиеКонтекстноеМеню" id="85"/>
+							<ExtendedTooltip name="ДомашнееЗаданиеРасширеннаяПодсказка" id="86"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Примечание" id="99">
+			<DataPath>Объект.Примечание</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Height>4</Height>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="ПримечаниеКонтекстноеМеню" id="100"/>
+			<ExtendedTooltip name="ПримечаниеРасширеннаяПодсказка" id="101"/>
+		</InputField>
+		<Table name="Уроки" id="16">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.Уроки</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="УрокиКонтекстноеМеню" id="17"/>
+			<AutoCommandBar name="УрокиКоманднаяПанель" id="18"/>
+			<ExtendedTooltip name="УрокиРасширеннаяПодсказка" id="19"/>
+			<SearchStringAddition name="УрокиСтрокаПоиска" id="20">
+				<AdditionSource>
+					<Item>Уроки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УрокиСтрокаПоискаКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="УрокиСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="УрокиСостояниеПросмотра" id="23">
+				<AdditionSource>
+					<Item>Уроки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УрокиСостояниеПросмотраКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="УрокиСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="УрокиУправлениеПоиском" id="26">
+				<AdditionSource>
+					<Item>Уроки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="УрокиУправлениеПоискомКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="УрокиУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">УрокиПередНачаломДобавления</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="УрокиНомерСтроки" id="29">
+					<DataPath>Объект.Уроки.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УрокиНомерСтрокиКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="УрокиНомерСтрокиРасширеннаяПодсказка" id="31"/>
+				</LabelField>
+				<InputField name="УрокиОбучающийся" id="47">
+					<DataPath>Объект.Уроки.Обучающийся</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УрокиОбучающийсяКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="УрокиОбучающийсяРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="УрокиДисциплина" id="32">
+					<DataPath>1/0:3d2ef2fe-69fe-49f7-9df2-f3cdeb00c0e4/0:fd95b9c0-c056-43c0-b0bd-59611572d923</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УрокиДисциплинаКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="УрокиДисциплинаРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="УрокиДатаНачала" id="44">
+					<DataPath>Объект.Уроки.ДатаНачала</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceButton>true</ChoiceButton>
+					<Format>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ='ddd. dd MMM HH:mm'</v8:content>
+						</v8:item>
+					</Format>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ДФ='dd.MM.yyyy HH:mm'</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="УрокиДатаНачалаКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="УрокиДатаНачалаРасширеннаяПодсказка" id="46"/>
+					<Events>
+						<Event name="OnChange">УрокиДатаНачалаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="УрокиПримечание" id="41">
+					<DataPath>Объект.Уроки.Замечание</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<MultiLine>true</MultiLine>
+					<ContextMenu name="УрокиПримечаниеКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="УрокиПримечаниеРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="УрокиОценка" id="81">
+					<DataPath>Объект.Уроки.Оценка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УрокиОценкаКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="УрокиОценкаРасширеннаяПодсказка" id="83"/>
+				</InputField>
+				<InputField name="УрокиДлительность" id="35">
+					<DataPath>Объект.Уроки.Длительность</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УрокиДлительностьКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="УрокиДлительностьРасширеннаяПодсказка" id="37"/>
+					<Events>
+						<Event name="OnChange">УрокиДлительностьПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="УрокиСумма" id="38">
+					<DataPath>Объект.Уроки.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УрокиСуммаКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="УрокиСуммаРасширеннаяПодсказка" id="40"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.Занятия</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Подтвердить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Подтвердить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Подтвердить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Подтвердить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Отменить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Отменить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Отменить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отменить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Перенести" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Перенести</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Перенести</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Перенести</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Проведено" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Проведено</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Проведено</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Проведено</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КСпискуУченика" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>К списку ученика</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>К списку ученика</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПовторитьЗанятие" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Продлить занятие</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Повторить занятие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПовторитьЗанятие</Action>
+		</Command>
+		<Command name="Оплачено" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Оплачено</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Оплачено</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Оплачено</Action>
+		</Command>
+		<Command name="ПроведеноИОплачено" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Проведено и оплачено</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Проведено и оплачено</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроведеноИОплачено</Action>
+		</Command>
+		<Command name="Занятия" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Занятия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Занятия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Занятия</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ДатаНачалаЗанятия">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="Дисциплина">
+			<Type>
+				<v8:Type>cfg:EnumRef.ДисциплиныЗанятий</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Обучающийся">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Обучающиеся</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ДлительностьЗанятия">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ДлительностьЗанятий</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>CommonCommand.СтруктураПодчиненности</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

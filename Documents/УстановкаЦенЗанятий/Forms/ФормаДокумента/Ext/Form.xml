@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Преподаватель" id="7">
+			<DataPath>Объект.Преподаватель</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПреподавательКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПреподавательРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<Table name="РасценкиЗанятий" id="10">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.РасценкиЗанятий</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="РасценкиЗанятийКонтекстноеМеню" id="11">
+				<ChildItems>
+					<Button name="РасценкиЗанятийКонтекстноеМенюЗаполнитьЦеныДляТекущегоРодителя" id="39">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗаполнитьЦеныДляТекущегоРодителя</CommandName>
+						<ExtendedTooltip name="РасценкиЗанятийКонтекстноеМенюЗаполнитьЦеныДляТекущегоРодителяРасширеннаяПодсказка" id="40"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="РасценкиЗанятийКоманднаяПанель" id="12">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="РасценкиЗанятийЗаполнитьТаблицу" id="32">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗаполнитьТаблицу</CommandName>
+						<ExtendedTooltip name="РасценкиЗанятийЗаполнитьТаблицуРасширеннаяПодсказка" id="33"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="РасценкиЗанятийРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="РасценкиЗанятийСтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>РасценкиЗанятий</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РасценкиЗанятийСтрокаПоискаКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="РасценкиЗанятийСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РасценкиЗанятийСостояниеПросмотра" id="17">
+				<AdditionSource>
+					<Item>РасценкиЗанятий</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РасценкиЗанятийСостояниеПросмотраКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="РасценкиЗанятийСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РасценкиЗанятийУправлениеПоиском" id="20">
+				<AdditionSource>
+					<Item>РасценкиЗанятий</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РасценкиЗанятийУправлениеПоискомКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="РасценкиЗанятийУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="РасценкиЗанятийНомерСтроки" id="23">
+					<DataPath>Объект.РасценкиЗанятий.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РасценкиЗанятийНомерСтрокиКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="РасценкиЗанятийНомерСтрокиРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<InputField name="РасценкиЗанятийОбучающийся" id="34">
+					<DataPath>Объект.РасценкиЗанятий.Обучающийся</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РасценкиЗанятийОбучающийсяКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="РасценкиЗанятийОбучающийсяРасширеннаяПодсказка" id="36"/>
+				</InputField>
+				<InputField name="РасценкиЗанятийДлительностьЗанятия" id="26">
+					<DataPath>Объект.РасценкиЗанятий.ДлительностьЗанятия</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РасценкиЗанятийДлительностьЗанятияКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="РасценкиЗанятийДлительностьЗанятияРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="РасценкиЗанятийЦена" id="29">
+					<DataPath>Объект.РасценкиЗанятий.Цена</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РасценкиЗанятийЦенаКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="РасценкиЗанятийЦенаРасширеннаяПодсказка" id="31"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="Комментарий" id="41">
+			<DataPath>Объект.Комментарий</DataPath>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="42"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="43"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.УстановкаЦенЗанятий</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьТаблицу" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Заполнить таблицу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Заполнить таблицу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьТаблицу</Action>
+		</Command>
+		<Command name="ЗаполнитьЦеныДляТекущегоРодителя" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Заполнить цены для текущего родителя</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Заполнить цены для текущего родителя</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьЦеныДляТекущегоРодителя</Action>
+		</Command>
+	</Commands>
+</Form>
