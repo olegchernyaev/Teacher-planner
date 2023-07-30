@@ -194,7 +194,6 @@
 			<DataProcessor>РаботаСУроком</DataProcessor>
 			<DataProcessor>ПланировщикЗадач</DataProcessor>
 			<DataProcessor>ПанельАдминистратора</DataProcessor>
-			<DataProcessor>ОтправкаРассылки</DataProcessor>
 			<InformationRegister>ПредпочтительныйТипЗанятий</InformationRegister>
 			<InformationRegister>ИнформацияОбОбразовании</InformationRegister>
 			<InformationRegister>УровниЗнанийОбучающихся</InformationRegister>

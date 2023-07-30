@@ -122,7 +122,7 @@
 		<Metadata name="CommonPicture.Оплачено" id="c0b4fcef-38cb-4930-953e-923f16f87d11" configVersion="0ed79330b17a1347bdbbd45b4e2b916b00000000"/>
 		<Metadata name="CommonPicture.Оплачено.Picture" id="c0b4fcef-38cb-4930-953e-923f16f87d11.0" configVersion="7dd4708b07315e4c98d00d523fafa58200000000"/>
 		<Metadata name="CommonPicture.Пустая" id="338ee489-c8c4-4bfa-bbb6-533c0eb55a99" configVersion="015883cf26982d4e81d1a6a52d4d060200000000"/>
-		<Metadata name="Configuration.ЗаметкиУчителя" id="cceedae4-7c2b-11ea-a782-32001126e000" configVersion="1684b61851e48443aa0102216201a4a700000000"/>
+		<Metadata name="Configuration.ЗаметкиУчителя" id="cceedae4-7c2b-11ea-a782-32001126e000" configVersion="eef567d2eb5303499eb862f2753afd4d00000000"/>
 		<Metadata name="Configuration.ЗаметкиУчителя.ClientApplicationInterface" id="cceedae5-7c2b-11ea-a782-32001126e000.b" configVersion="7250a256e134eb11fc85b8e85620458e00000000"/>
 		<Metadata name="Configuration.ЗаметкиУчителя.HomePageWorkArea" id="cceedae5-7c2b-11ea-a782-32001126e000.8" configVersion="d2be06f2e034eb116f89b8e85620458e00000000"/>
 		<Metadata name="Configuration.ЗаметкиУчителя.Logo" id="cceedae5-7c2b-11ea-a782-32001126e000.1" configVersion="7dfa2b4663674d4b8903ceb3d8a4b39600000000"/>
@@ -176,9 +176,6 @@
 		<Metadata name="DataProcessor.КонсольЗапросов.ObjectModule" id="a22a4379-f140-4e5c-a35e-68e54f5c0034.0" configVersion="741de6801ef001478d88a669a51322ca00000000"/>
 		<Metadata name="DataProcessor.КонсольЗапросов.Template.РезультатВыполненияЗапроса" id="88b4c3d8-fb21-49f1-9165-ea7dea0b688b" configVersion="9060911c31b3614197470467e1eeff4700000000"/>
 		<Metadata name="DataProcessor.КонсольЗапросов.Template.РезультатВыполненияЗапроса.Template" id="88b4c3d8-fb21-49f1-9165-ea7dea0b688b.0" configVersion="acb1ee3a01c4d7489fdc7c9c0ce880e000000000"/>
-		<Metadata name="DataProcessor.ОтправкаРассылки" id="d7ace14f-a383-4fff-964f-a6131e7ffc7e" configVersion="da8f310ef0e0d04bb3861e5c024abbbd00000000"/>
-		<Metadata name="DataProcessor.ОтправкаРассылки.Form.Форма" id="9ee62516-ba6b-4583-8734-24e124502226" configVersion="e529207be0719e47bbb21f98f5a0655800000000"/>
-		<Metadata name="DataProcessor.ОтправкаРассылки.Form.Форма.Form" id="9ee62516-ba6b-4583-8734-24e124502226.0" configVersion="c362837b34d7db4a98de9a3388c965cb00000000"/>
 		<Metadata name="DataProcessor.ПанельАдминистратора" id="121ce91f-c815-423d-8d94-7e8ea2f3dbf7" configVersion="9dbec1e086417342899201a2cf3a6c9200000000"/>
 		<Metadata name="DataProcessor.ПанельАдминистратора.Form.Форма" id="7fb1e08e-c850-4176-9101-29f9dc97d5bf" configVersion="3367f6aa01c6204da67f05407b42b5bf00000000"/>
 		<Metadata name="DataProcessor.ПанельАдминистратора.Form.Форма.Form" id="7fb1e08e-c850-4176-9101-29f9dc97d5bf.0" configVersion="0fc513727d3af34f9c79b626bcdc667a00000000"/>
