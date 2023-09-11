@@ -183,8 +183,8 @@
 		<Metadata name="DataProcessor.ПанельАдминистратора.Form.Форма" id="7fb1e08e-c850-4176-9101-29f9dc97d5bf" configVersion="3367f6aa01c6204da67f05407b42b5bf00000000"/>
 		<Metadata name="DataProcessor.ПанельАдминистратора.Form.Форма.Form" id="7fb1e08e-c850-4176-9101-29f9dc97d5bf.0" configVersion="0fc513727d3af34f9c79b626bcdc667a00000000"/>
 		<Metadata name="DataProcessor.ПланировщикЗадач" id="07485797-b391-402f-99d7-d62090b9ca4b" configVersion="082110fe45d5684b81d5078b42cc1d4e00000000"/>
-		<Metadata name="DataProcessor.ПланировщикЗадач.Form.Форма" id="6487e82d-5f58-447e-92de-aff6a48da841" configVersion="1a8e522fc383454e9bd2220704944b8c00000000"/>
-		<Metadata name="DataProcessor.ПланировщикЗадач.Form.Форма.Form" id="6487e82d-5f58-447e-92de-aff6a48da841.0" configVersion="e87f4a67a5e41d44ba82cf9d174b7c2100000000"/>
+		<Metadata name="DataProcessor.ПланировщикЗадач.Form.Форма" id="6487e82d-5f58-447e-92de-aff6a48da841" configVersion="ebedd8eb86d2c347ad370e9bdcc43d5100000000"/>
+		<Metadata name="DataProcessor.ПланировщикЗадач.Form.Форма.Form" id="6487e82d-5f58-447e-92de-aff6a48da841.0" configVersion="11ac2c3c3e85484ca532ea306f4d9f6b00000000"/>
 		<Metadata name="DataProcessor.РаботаСУроком" id="089d7f48-44cf-441b-8742-4187147deb18" configVersion="b1a1a449ef5d8844bd86d5d4662039f700000000"/>
 		<Metadata name="Document.Занятия" id="879b5ebd-b47e-4335-93e9-3308c44e12c0" configVersion="ceec94398f24c946bce10da684691e7500000000">
 			<Metadata name="Document.Занятия.TabularSection.Уроки.Attribute.Замечание" id="083ebdf8-5443-453a-a56e-a131356dbb09"/>
