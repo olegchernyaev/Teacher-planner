@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 	<AutoTitle>false</AutoTitle>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
@@ -89,7 +89,7 @@
 				<Representation>PictureAndText</Representation>
 				<CommandName>Form.Command.Успеваемость</CommandName>
 				<Picture>
-					<xr:Ref>0:87d032df-0956-47e9-bead-4e15330f1983</xr:Ref>
+					<xr:Ref>StdPicture.AppearanceUpArrowGreen</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
 				<ExtendedTooltip name="ФормаУспеваемостьРасширеннаяПодсказка" id="39"/>
@@ -100,7 +100,7 @@
 				<Representation>PictureAndText</Representation>
 				<CommandName>Form.Command.СписокЗанятий</CommandName>
 				<Picture>
-					<xr:Ref>StdPicture.Calendar</xr:Ref>
+					<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
 				<ExtendedTooltip name="ФормаСписокЗанятийРасширеннаяПодсказка" id="41"/>
@@ -295,7 +295,7 @@
 				<Event name="BeforeCreate">ПланировщикПередСозданием</Event>
 				<Event name="OnEditEnd">РасписаниеПриОкончанииРедактирования</Event>
 				<Event name="BeforeStartEdit">РасписаниеПередНачаломРедактирования</Event>
-				<Event name="b34abb58-ee89-4119-945c-6432e9ef04a9">РасписаниеОбработкаФормированияКоманд</Event>
+				<Event name="CommandGenerateProcessing">РасписаниеОбработкаФормированияКоманд</Event>
 				<Event name="BeforeStartQuickEdit">ПланировщикПередНачаломБыстрогоРедактирования</Event>
 				<Event name="Selection">РасписаниеВыбор</Event>
 			</Events>
@@ -333,6 +333,11 @@
 					<pl:replacementDate>0001-01-01T00:00:00</pl:replacementDate>
 					<pl:deleted>false</pl:deleted>
 					<pl:id>2e3e2612-d69b-434f-8fd9-b13744e7e000</pl:id>
+					<pl:textFormatted>false</pl:textFormatted>
+					<pl:border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+					</pl:border>
+					<pl:editMode>EnableEdit</pl:editMode>
 				</pl:item>
 				<pl:borderColor>auto</pl:borderColor>
 				<pl:backColor>#F6F6F6</pl:backColor>
@@ -392,11 +397,22 @@
 					<currentLevel xmlns="http://v8.1c.ru/8.2/data/chart">0</currentLevel>
 				</pl:timeScale>
 				<pl:period>
-					<pl:begin>2023-07-30T00:00:00</pl:begin>
-					<pl:end>2023-07-30T23:59:59</pl:end>
+					<pl:begin>2023-12-14T00:00:00</pl:begin>
+					<pl:end>2023-12-14T23:59:59</pl:end>
 				</pl:period>
 				<pl:displayCurrentDate>true</pl:displayCurrentDate>
 				<pl:itemsTimeRepresentation>BeginAndEndTime</pl:itemsTimeRepresentation>
+				<pl:itemsBehaviorWhenSpaceInsufficient>CollapseItems</pl:itemsBehaviorWhenSpaceInsufficient>
+				<pl:autoMinColumnWidth>true</pl:autoMinColumnWidth>
+				<pl:autoMinRowHeight>true</pl:autoMinRowHeight>
+				<pl:minColumnWidth>0</pl:minColumnWidth>
+				<pl:minRowHeight>0</pl:minRowHeight>
+				<pl:fixDimensionsHeader>auto</pl:fixDimensionsHeader>
+				<pl:fixTimeScaleHeader>auto</pl:fixTimeScaleHeader>
+				<pl:border width="1">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+				</pl:border>
+				<pl:newItemsTextType>String</pl:newItemsTextType>
 			</Settings>
 		</Attribute>
 		<Attribute name="НачалоПериода" id="3">
