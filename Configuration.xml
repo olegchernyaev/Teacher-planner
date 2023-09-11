@@ -28,7 +28,7 @@
 			</xr:ContainedObject>
 			<xr:ContainedObject>
 				<xr:ClassId>fb282519-d103-4dd3-bc12-cb271d631dfc</xr:ClassId>
-				<xr:ObjectId>e066c980-bdfb-4192-9dcb-c7c365ce867f</xr:ObjectId>
+				<xr:ObjectId>8c5c8563-9cb4-445d-bfa9-c69111721056</xr:ObjectId>
 			</xr:ContainedObject>
 		</InternalInfo>
 		<Properties>
@@ -241,7 +241,7 @@
 			<SynchronousPlatformExtensionAndAddInCallUseMode>Use</SynchronousPlatformExtensionAndAddInCallUseMode>
 			<InterfaceCompatibilityMode>Taxi</InterfaceCompatibilityMode>
 			<DatabaseTablespacesUseMode>DontUse</DatabaseTablespacesUseMode>
-			<CompatibilityMode>Version8_3_8</CompatibilityMode>
+			<CompatibilityMode>Version8_3_13</CompatibilityMode>
 			<DefaultConstantsForm/>
 		</Properties>
 		<ChildObjects>
@@ -266,6 +266,7 @@
 			<Constant>ВыводитьЗаголовокПланировщикаЗадач</Constant>
 			<Constant>ПланировщикЗадачВремяС</Constant>
 			<Constant>ПланировщикЗадачВремяПо</Constant>
+			<Constant>НижняяГраницаНапоминанийОСтатусахЗанятий</Constant>
 			<CommonForm>ГруппаКнопокНачальнойСтраницы</CommonForm>
 			<CommonForm>ФормаСтруктурыПодчиненности</CommonForm>
 			<CommonForm>ВвестиДатуФормат</CommonForm>

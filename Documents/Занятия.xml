@@ -188,8 +188,8 @@
 				<xr:Field>Document.Занятия.StandardAttribute.Number</xr:Field>
 			</InputByString>
 			<CreateOnInput>Use</CreateOnInput>
-			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
-			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
+			<SearchStringModeOnInputByString>AnyPart</SearchStringModeOnInputByString>
+			<FullTextSearchOnInputByString>Use</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
 			<DefaultObjectForm>Document.Занятия.Form.ФормаДокумента</DefaultObjectForm>
 			<DefaultListForm>Document.Занятия.Form.ФормаСписка</DefaultListForm>
