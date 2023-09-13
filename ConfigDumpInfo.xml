@@ -184,8 +184,8 @@
 		<Metadata name="DataProcessor.ПанельАдминистратора.Form.Форма" id="7fb1e08e-c850-4176-9101-29f9dc97d5bf" configVersion="3367f6aa01c6204da67f05407b42b5bf00000000"/>
 		<Metadata name="DataProcessor.ПанельАдминистратора.Form.Форма.Form" id="7fb1e08e-c850-4176-9101-29f9dc97d5bf.0" configVersion="0fc513727d3af34f9c79b626bcdc667a00000000"/>
 		<Metadata name="DataProcessor.ПланировщикЗадач" id="07485797-b391-402f-99d7-d62090b9ca4b" configVersion="082110fe45d5684b81d5078b42cc1d4e00000000"/>
-		<Metadata name="DataProcessor.ПланировщикЗадач.Form.Форма" id="6487e82d-5f58-447e-92de-aff6a48da841" configVersion="aaa3e42eeccfd64994f2f044fbeb68b300000000"/>
-		<Metadata name="DataProcessor.ПланировщикЗадач.Form.Форма.Form" id="6487e82d-5f58-447e-92de-aff6a48da841.0" configVersion="8b6027cddf795a4d9a0d0360d6336f5500000000"/>
+		<Metadata name="DataProcessor.ПланировщикЗадач.Form.Форма" id="6487e82d-5f58-447e-92de-aff6a48da841" configVersion="9ab2fa55a911d447860f90ad86062b7000000000"/>
+		<Metadata name="DataProcessor.ПланировщикЗадач.Form.Форма.Form" id="6487e82d-5f58-447e-92de-aff6a48da841.0" configVersion="2628c81a523f1f43bd9631cada6b247600000000"/>
 		<Metadata name="DataProcessor.РаботаСУроком" id="089d7f48-44cf-441b-8742-4187147deb18" configVersion="b1a1a449ef5d8844bd86d5d4662039f700000000"/>
 		<Metadata name="Document.Занятия" id="879b5ebd-b47e-4335-93e9-3308c44e12c0" configVersion="d016b38ee3241441bb1a642f6b71252300000000">
 			<Metadata name="Document.Занятия.TabularSection.Уроки.Attribute.Замечание" id="083ebdf8-5443-453a-a56e-a131356dbb09"/>
@@ -203,8 +203,8 @@
 			<Metadata name="Document.Занятия.Attribute.ТемаПоУчебнику" id="f136e927-60b3-45b8-bc40-2b72da5a9e47"/>
 			<Metadata name="Document.Занятия.Attribute.ИндивидуальноеЗанятие" id="fb9477a9-f122-4e99-b63e-480c8c082c6d"/>
 		</Metadata>
-		<Metadata name="Document.Занятия.Form.ФормаДокумента" id="f7f9f800-4015-43e7-98eb-0b2064582e6c" configVersion="514f72f2199f934994ad9a56527faa0a00000000"/>
-		<Metadata name="Document.Занятия.Form.ФормаДокумента.Form" id="f7f9f800-4015-43e7-98eb-0b2064582e6c.0" configVersion="a06a0bda2032b6499cb03c4842bc807500000000"/>
+		<Metadata name="Document.Занятия.Form.ФормаДокумента" id="f7f9f800-4015-43e7-98eb-0b2064582e6c" configVersion="47573901e5c1cb48a361f37ebcbe7f6e00000000"/>
+		<Metadata name="Document.Занятия.Form.ФормаДокумента.Form" id="f7f9f800-4015-43e7-98eb-0b2064582e6c.0" configVersion="8ba5ef77901afb4f995c4e7de50d4cfc00000000"/>
 		<Metadata name="Document.Занятия.Form.ФормаСписка" id="853305c1-438a-40e0-b30e-ccced176ab8a" configVersion="d820337a1820ad4cbf86c2988406c01c00000000"/>
 		<Metadata name="Document.Занятия.Form.ФормаСписка.Form" id="853305c1-438a-40e0-b30e-ccced176ab8a.0" configVersion="5c95535e3a43474986f7526d72b2ec7800000000"/>
 		<Metadata name="Document.Занятия.ObjectModule" id="879b5ebd-b47e-4335-93e9-3308c44e12c0.0" configVersion="b4080dc809cefa47aae31aed7cb7770800000000"/>
