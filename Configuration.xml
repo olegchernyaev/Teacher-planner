@@ -28,7 +28,7 @@
 			</xr:ContainedObject>
 			<xr:ContainedObject>
 				<xr:ClassId>fb282519-d103-4dd3-bc12-cb271d631dfc</xr:ClassId>
-				<xr:ObjectId>dbeddc9b-04a3-437a-8104-4940b4381759</xr:ObjectId>
+				<xr:ObjectId>d15f92dd-7688-48c0-93ef-12f35ce29df6</xr:ObjectId>
 			</xr:ContainedObject>
 		</InternalInfo>
 		<Properties>
@@ -267,6 +267,7 @@
 			<Constant>ПланировщикЗадачВремяС</Constant>
 			<Constant>ПланировщикЗадачВремяПо</Constant>
 			<Constant>НижняяГраницаНапоминанийОСтатусахЗанятий</Constant>
+			<Constant>РазмерШрифтаТекстаПланировщика</Constant>
 			<CommonForm>ГруппаКнопокНачальнойСтраницы</CommonForm>
 			<CommonForm>ФормаСтруктурыПодчиненности</CommonForm>
 			<CommonForm>ВвестиДатуФормат</CommonForm>
