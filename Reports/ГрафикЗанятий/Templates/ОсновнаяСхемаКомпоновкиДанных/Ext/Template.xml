@@ -26,6 +26,11 @@
 					<v8:content>Дата занятия</v8:content>
 				</v8:item>
 			</title>
+			<orderExpression>
+				<dcscom:expression>ДатаЗанятия</dcscom:expression>
+				<dcscom:orderType>Asc</dcscom:orderType>
+				<dcscom:autoOrder>false</dcscom:autoOrder>
+			</orderExpression>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Дисциплина</dataPath>
@@ -118,18 +123,29 @@
 			<dataPath>Сумма</dataPath>
 			<field>Сумма</field>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаЗанятияГод</dataPath>
+			<field>ДатаЗанятияГод</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Дата занятия год</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	СтатусыЗанятий.СтатусЗанятия,
+	СтатусыЗанятий.СтатусЗанятия КАК СтатусЗанятия,
 	РасписаниеЗанятий.Период КАК ДатаЗанятия,
+	ГОД(РасписаниеЗанятий.Период) КАК ДатаЗанятияГод,
 	РасписаниеЗанятий.Регистратор КАК Занятие,
 	РасписаниеЗанятий.Обучающийся КАК Ученик,
-	РасписаниеЗанятий.Преподаватель,
-	РасписаниеЗанятий.Дисциплина,
-	РасписаниеЗанятий.ТемаПреподавателя,
-	РасписаниеЗанятий.ТемаПоУчебнику,
-	РасписаниеЗанятий.Замечание,
-	РасписаниеЗанятий.ДомашнееЗадание,
+	РасписаниеЗанятий.Преподаватель КАК Преподаватель,
+	РасписаниеЗанятий.Дисциплина КАК Дисциплина,
+	РасписаниеЗанятий.ТемаПреподавателя КАК ТемаПреподавателя,
+	РасписаниеЗанятий.ТемаПоУчебнику КАК ТемаПоУчебнику,
+	РасписаниеЗанятий.Замечание КАК Замечание,
+	РасписаниеЗанятий.ДомашнееЗадание КАК ДомашнееЗадание,
 	ЕСТЬNULL(РасписаниеЗанятий.Оценка, 0) КАК Оценка,
 	СУММА(1) КАК КоличествоЗанятий,
 	ЕСТЬNULL(РасписаниеЗанятий.Длительность.ЗначениеМинут, 0) КАК ДлительностьМинут,
@@ -155,11 +171,18 @@
 	ЕСТЬNULL(РасписаниеЗанятий.Длительность.ЗначениеМинут, 0),
 	ЕСТЬNULL(РасписаниеЗанятий.Оценка, 0),
 	ВЫРАЗИТЬ(РасписаниеЗанятий.Регистратор.Примечание КАК СТРОКА(500)),
-	ЕСТЬNULL(РасписаниеЗанятий.Длительность.ЗначениеМинут, 0) / 60</query>
+	ЕСТЬNULL(РасписаниеЗанятий.Длительность.ЗначениеМинут, 0) / 60,
+	ГОД(РасписаниеЗанятий.Период)</query>
 	</dataSet>
 	<calculatedField>
 		<dataPath>УпорядочиваниеПоСтатусу</dataPath>
-		<expression>Выбор Когда СтатусЗанятия = Значение(Перечисление.СтатусыЗанятий.Проведено) Тогда 1  Когда СтатусЗанятия = Значение(Перечисление.СтатусыЗанятий.Подтверждено) Тогда 2  Когда СтатусЗанятия = Значение(Перечисление.СтатусыЗанятий.НеПодтверждено) Тогда 3  Когда СтатусЗанятия = Значение(Перечисление.СтатусыЗанятий.Отменено) Тогда 4  Когда СтатусЗанятия = Значение(Перечисление.СтатусыЗанятий.Перенесено) Тогда 5 КОнец</expression>
+		<expression>Выбор Когда СтатусЗанятия = Значение(Перечисление.СтатусыЗанятий.ПроведеноИОплачено) Тогда 1  
+Когда СтатусЗанятия = Значение(Перечисление.СтатусыЗанятий.Проведено) Тогда 2 
+Когда СтатусЗанятия = Значение(Перечисление.СтатусыЗанятий.Оплачено) Тогда 3 
+Когда СтатусЗанятия = Значение(Перечисление.СтатусыЗанятий.Подтверждено) Тогда 4  
+Когда СтатусЗанятия = Значение(Перечисление.СтатусыЗанятий.НеПодтверждено) Тогда 5 
+Когда СтатусЗанятия = Значение(Перечисление.СтатусыЗанятий.Отменено) Тогда 6 
+Когда СтатусЗанятия = Значение(Перечисление.СтатусыЗанятий.Перенесено) Тогда 7 Конец</expression>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>en</v8:lang>
@@ -198,6 +221,7 @@
 					<dcsset:field>ДатаЗанятия</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
 					<dcsset:field>Дисциплина</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -210,6 +234,7 @@
 					<dcsset:field>Занятие</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
 					<dcsset:field>Преподаватель</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -243,16 +268,35 @@
 				<dcsset:userSettingID>37bfbc5d-e4f1-4dbb-98b2-ae69cc43eb14</dcsset:userSettingID>
 			</dcsset:selection>
 			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ДатаЗанятия</dcsset:left>
+					<dcsset:comparisonType>Greater</dcsset:comparisonType>
+					<dcsset:right xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+						<v8:date>0001-01-01T00:00:00</v8:date>
+					</dcsset:right>
+					<dcsset:userSettingID>14134250-825c-4dd0-9dd6-309cdf1fd44d</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">СтатусЗанятия</dcsset:left>
+					<dcsset:comparisonType>InList</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыЗанятий.ПроведеноИОплачено</dcsset:right>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыЗанятий.Проведено</dcsset:right>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыЗанятий.Оплачено</dcsset:right>
+					<dcsset:userSettingID>3000ff7a-51da-470e-ad39-d451b8363f52</dcsset:userSettingID>
+				</dcsset:item>
 				<dcsset:viewMode>Normal</dcsset:viewMode>
 				<dcsset:userSettingID>a6e2470a-a758-4cb3-946a-88f5d6ad253c</dcsset:userSettingID>
 			</dcsset:filter>
 			<dcsset:order>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>УпорядочиваниеПоСтатусу</dcsset:field>
+					<dcsset:field>ДатаЗанятия</dcsset:field>
 					<dcsset:orderType>Asc</dcsset:orderType>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>ДатаЗанятия</dcsset:field>
+					<dcsset:field>УпорядочиваниеПоСтатусу</dcsset:field>
 					<dcsset:orderType>Asc</dcsset:orderType>
 				</dcsset:item>
 				<dcsset:viewMode>Normal</dcsset:viewMode>
@@ -334,7 +378,21 @@
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:groupItems>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
-						<dcsset:field>Преподаватель</dcsset:field>
+						<dcsset:field>ДатаЗанятия.ЧастиДат.Год</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ДатаЗанятия.ЧастиДат.Месяц</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ДатаЗанятия.ЧастиДат.НазваниеМесяца</dcsset:field>
 						<dcsset:groupType>Items</dcsset:groupType>
 						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
@@ -342,7 +400,14 @@
 					</dcsset:item>
 				</dcsset:groupItems>
 				<dcsset:order>
-					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					<dcsset:item xsi:type="dcsset:OrderItemField">
+						<dcsset:field>ДатаЗанятия.ЧастиДат.Год</dcsset:field>
+						<dcsset:orderType>Desc</dcsset:orderType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:OrderItemField">
+						<dcsset:field>ДатаЗанятия.ЧастиДат.Месяц</dcsset:field>
+						<dcsset:orderType>Desc</dcsset:orderType>
+					</dcsset:item>
 				</dcsset:order>
 				<dcsset:selection>
 					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
@@ -378,17 +443,24 @@
 		</dcsset:settings>
 	</settingsVariant>
 	<settingsVariant>
-		<dcsset:name>Краткий</dcsset:name>
+		<dcsset:name>ЗанятияУчеников</dcsset:name>
 		<dcsset:presentation xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>en</v8:lang>
-				<v8:content>Основной1</v8:content>
+				<v8:content>Занятия учеников</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ученик</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ДатаЗанятия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Дисциплина</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ДомашнееЗадание</dcsset:field>
@@ -400,25 +472,66 @@
 					<dcsset:field>Замечание</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Занятие</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Преподаватель</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>СтатусЗанятия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ТемаПоУчебнику</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ТемаПреподавателя</dcsset:field>
 				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>КоличествоЗанятий</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ДлительностьМинут</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ДлительностьЧасов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Оценка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Сумма</dcsset:field>
+				</dcsset:item>
 				<dcsset:viewMode>Normal</dcsset:viewMode>
 				<dcsset:userSettingID>37bfbc5d-e4f1-4dbb-98b2-ae69cc43eb14</dcsset:userSettingID>
 			</dcsset:selection>
 			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">СтатусЗанятия</dcsset:left>
+					<dcsset:comparisonType>InList</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыЗанятий.ПроведеноИОплачено</dcsset:right>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыЗанятий.Проведено</dcsset:right>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыЗанятий.Оплачено</dcsset:right>
+					<dcsset:userSettingID>c2861cf0-ac57-48e7-b340-0c7c962d0419</dcsset:userSettingID>
+				</dcsset:item>
 				<dcsset:viewMode>Normal</dcsset:viewMode>
 				<dcsset:userSettingID>a6e2470a-a758-4cb3-946a-88f5d6ad253c</dcsset:userSettingID>
 			</dcsset:filter>
 			<dcsset:order>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>УпорядочиваниеПоСтатусу</dcsset:field>
-					<dcsset:orderType>Asc</dcsset:orderType>
+					<dcsset:field>ДатаЗанятия</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>ДатаЗанятия</dcsset:field>
+					<dcsset:field>УпорядочиваниеПоСтатусу</dcsset:field>
 					<dcsset:orderType>Asc</dcsset:orderType>
 				</dcsset:item>
 				<dcsset:viewMode>Normal</dcsset:viewMode>
@@ -498,46 +611,16 @@
 				</dcscor:item>
 			</dcsset:outputParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
-				<dcsset:groupItems>
-					<dcsset:item xsi:type="dcsset:GroupItemField">
-						<dcsset:field>Преподаватель</dcsset:field>
-						<dcsset:groupType>Items</dcsset:groupType>
-						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-					</dcsset:item>
-				</dcsset:groupItems>
 				<dcsset:order>
 					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					<dcsset:item xsi:type="dcsset:OrderItemField">
+						<dcsset:field>ДатаЗанятия</dcsset:field>
+						<dcsset:orderType>Desc</dcsset:orderType>
+					</dcsset:item>
 				</dcsset:order>
 				<dcsset:selection>
 					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 				</dcsset:selection>
-				<dcsset:item xsi:type="dcsset:StructureItemGroup">
-					<dcsset:groupItems>
-						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>СтатусЗанятия</dcsset:field>
-							<dcsset:groupType>Items</dcsset:groupType>
-							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-						</dcsset:item>
-					</dcsset:groupItems>
-					<dcsset:order>
-						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-					</dcsset:order>
-					<dcsset:selection>
-						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-					</dcsset:selection>
-					<dcsset:item xsi:type="dcsset:StructureItemGroup">
-						<dcsset:order>
-							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-						</dcsset:order>
-						<dcsset:selection>
-							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-						</dcsset:selection>
-					</dcsset:item>
-				</dcsset:item>
 			</dcsset:item>
 			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
 			<dcsset:itemsUserSettingID>81aa6a76-9a7e-451a-aae4-82e6d8ce52ca</dcsset:itemsUserSettingID>

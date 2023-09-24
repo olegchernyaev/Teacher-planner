@@ -38,6 +38,18 @@
 			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 		</Properties>
 		<ChildObjects>
+			<EnumValue uuid="20d0b8dc-a28f-47a3-900f-53f85cd02a51">
+				<Properties>
+					<Name>ПроведеноИОплачено</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Проведено и оплачено</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
 			<EnumValue uuid="a7570000-9b48-49e6-a450-16eb12873556">
 				<Properties>
 					<Name>Проведено</Name>
@@ -45,6 +57,18 @@
 						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>Проведено</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="e251f3b8-b9c1-460b-8ffb-e8ee41d3b302">
+				<Properties>
+					<Name>Оплачено</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Оплачено</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -93,30 +117,6 @@
 						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>Перенесено</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-				</Properties>
-			</EnumValue>
-			<EnumValue uuid="e251f3b8-b9c1-460b-8ffb-e8ee41d3b302">
-				<Properties>
-					<Name>Оплачено</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Оплачено</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-				</Properties>
-			</EnumValue>
-			<EnumValue uuid="20d0b8dc-a28f-47a3-900f-53f85cd02a51">
-				<Properties>
-					<Name>ПроведеноИОплачено</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Проведено и оплачено</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
