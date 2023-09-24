@@ -348,8 +348,8 @@
 		<Metadata name="Report.ГрафикЗанятий.Form.ФормаОтчета" id="77250d4c-0d91-4f59-867b-8747a0ccbf03" configVersion="8b7d601adb7e374eb29cc3f47dc8c1b500000000"/>
 		<Metadata name="Report.ГрафикЗанятий.Form.ФормаОтчета.Form" id="77250d4c-0d91-4f59-867b-8747a0ccbf03.0" configVersion="48a8126e344f6b4fbb4fb40cead8b7ae00000000"/>
 		<Metadata name="Report.ГрафикЗанятий.ObjectModule" id="ceabb99f-c864-4f76-beb2-1e15d02c166e.0" configVersion="7964dc164fab6e48a04fb88dc177532e00000000"/>
-		<Metadata name="Report.ГрафикЗанятий.Template.ОсновнаяСхемаКомпоновкиДанных" id="e970b3dc-c474-4788-a734-dbf13457d0b0" configVersion="418c7e70f4d0c24b950faaa5c179d20400000000"/>
-		<Metadata name="Report.ГрафикЗанятий.Template.ОсновнаяСхемаКомпоновкиДанных.Template" id="e970b3dc-c474-4788-a734-dbf13457d0b0.0" configVersion="8418524ac61146419ba2670ed6dadea800000000"/>
+		<Metadata name="Report.ГрафикЗанятий.Template.ОсновнаяСхемаКомпоновкиДанных" id="e970b3dc-c474-4788-a734-dbf13457d0b0" configVersion="0757eb7b0b339c45adde905b1a6c7fa100000000"/>
+		<Metadata name="Report.ГрафикЗанятий.Template.ОсновнаяСхемаКомпоновкиДанных.Template" id="e970b3dc-c474-4788-a734-dbf13457d0b0.0" configVersion="731d3a1a7ab9d64ebe84bf1b814b77b200000000"/>
 		<Metadata name="Report.Продажи" id="f00e3cbf-357f-41ff-8d96-376dd945fc8e" configVersion="a7f48541f244dd49b696f1d59388f83e00000000"/>
 		<Metadata name="Report.Продажи.Form.ФормаОтчета" id="020c9554-fdc7-44e2-bb3d-938bc6898faf" configVersion="2effb144d87aeb11c395b8e85620458e00000000"/>
 		<Metadata name="Report.Продажи.Form.ФормаОтчета.Form" id="020c9554-fdc7-44e2-bb3d-938bc6898faf.0" configVersion="c8f7b044d87aeb11c395b8e85620458e00000000"/>
