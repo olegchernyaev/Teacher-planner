@@ -109,8 +109,8 @@
 		<Metadata name="CommonModule.ОбщегоНазначения.Module" id="6050faaa-6867-46f3-9c9d-e1c927b02079.0" configVersion="378d4bc5ae97f248ba3024d54b37fb4a00000000"/>
 		<Metadata name="CommonModule.ОбщегоНазначенияКлиентСервер" id="42125669-fe98-40d1-be8a-2cdba916ae24" configVersion="275a72893205004eb7cbe9ad566e915c00000000"/>
 		<Metadata name="CommonModule.ОбщегоНазначенияКлиентСервер.Module" id="42125669-fe98-40d1-be8a-2cdba916ae24.0" configVersion="ccdcffb64158e346ac5db243209f93c200000000"/>
-		<Metadata name="CommonModule.РаботаСДокументамиВызовСервера" id="79a1430a-3f4c-4543-a9e6-937b9e074c07" configVersion="e318cb23418a934399b27cd214fbe8a100000000"/>
-		<Metadata name="CommonModule.РаботаСДокументамиВызовСервера.Module" id="79a1430a-3f4c-4543-a9e6-937b9e074c07.0" configVersion="b5e9175204fb534695df83a6aa4c577700000000"/>
+		<Metadata name="CommonModule.РаботаСДокументамиВызовСервера" id="79a1430a-3f4c-4543-a9e6-937b9e074c07" configVersion="6c170019c76efc4bac015bda62fde64e00000000"/>
+		<Metadata name="CommonModule.РаботаСДокументамиВызовСервера.Module" id="79a1430a-3f4c-4543-a9e6-937b9e074c07.0" configVersion="af1a9356bc151e4f8b3fc53240e025d900000000"/>
 		<Metadata name="CommonModule.РаботаСФормой" id="140f10fc-e148-4655-94b9-4614d82cd855" configVersion="956fbfa163fd3e4ba49b79a81888bb2800000000"/>
 		<Metadata name="CommonModule.РаботаСФормой.Module" id="140f10fc-e148-4655-94b9-4614d82cd855.0" configVersion="e3496b77f658b94dbd6ffde4f93940fe00000000"/>
 		<Metadata name="CommonModule.СтроковыеФункцииКлиентСервер" id="ffa55e19-6a59-4c53-8094-7d34806795bd" configVersion="31c0b43fc10f5e499b4092ec4b4cfcaa00000000"/>
