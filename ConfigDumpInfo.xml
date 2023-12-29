@@ -90,8 +90,8 @@
 		<Metadata name="CommonCommand.СтруктураПодчиненности.CommandModule" id="05e70d09-ce6e-4fca-9ab1-e84953372e6e.2" configVersion="a5e6016f339f284c8870e9c95832140000000000"/>
 		<Metadata name="CommonForm.ВвестиДатуФормат" id="f722928c-c79f-4a5b-a666-31c36aaab074" configVersion="1261762aaac6fb4189d52f35d9602eb100000000"/>
 		<Metadata name="CommonForm.ВвестиДатуФормат.Form" id="f722928c-c79f-4a5b-a666-31c36aaab074.0" configVersion="f5072481234f2646815088978704ad5800000000"/>
-		<Metadata name="CommonForm.ГруппаКнопокНачальнойСтраницы" id="05ad65e0-0bc1-424b-abd1-58dcbe7a5848" configVersion="4b649f683a74f9439c5d381ce4422df300000000"/>
-		<Metadata name="CommonForm.ГруппаКнопокНачальнойСтраницы.Form" id="05ad65e0-0bc1-424b-abd1-58dcbe7a5848.0" configVersion="362fef148136d547b30b1b4e739472e600000000"/>
+		<Metadata name="CommonForm.ГруппаКнопокНачальнойСтраницы" id="05ad65e0-0bc1-424b-abd1-58dcbe7a5848" configVersion="fc015e9325942243b4e249c6400c0ce000000000"/>
+		<Metadata name="CommonForm.ГруппаКнопокНачальнойСтраницы.Form" id="05ad65e0-0bc1-424b-abd1-58dcbe7a5848.0" configVersion="396c84606782584ba70cb1a295bb2bd400000000"/>
 		<Metadata name="CommonForm.ЗанятияБезПодтверждения" id="b88eb0c7-8756-4a19-9164-3377ae4071c1" configVersion="8f270c0039671349bab6f19f766b2ec400000000"/>
 		<Metadata name="CommonForm.ЗанятияБезПодтверждения.Form" id="b88eb0c7-8756-4a19-9164-3377ae4071c1.0" configVersion="79ccfb88c37c20468412aa32d424971e00000000"/>
 		<Metadata name="CommonForm.НастройкаСистемы" id="0436ce06-89e0-4924-ba0e-07042f1bf135" configVersion="7d1cb05649a2824583360c56ff74b7d100000000"/>

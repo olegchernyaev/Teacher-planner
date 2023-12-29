@@ -119,6 +119,7 @@
 					</Button>
 					<Button name="ФормаВсеДокументы" id="37">
 						<Type>CommandBarButton</Type>
+						<Visible>false</Visible>
 						<CommandName>Form.Command.ВсеДокументы</CommandName>
 						<ExtendedTooltip name="ФормаВсеДокументыРасширеннаяПодсказка" id="38"/>
 					</Button>
