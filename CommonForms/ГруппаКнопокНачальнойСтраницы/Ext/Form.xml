@@ -117,6 +117,11 @@
 						<CommandName>Form.Command.Продажи</CommandName>
 						<ExtendedTooltip name="ФормаПродажиРасширеннаяПодсказка" id="32"/>
 					</Button>
+					<Button name="ФормаВсеДокументы" id="37">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ВсеДокументы</CommandName>
+						<ExtendedTooltip name="ФормаВсеДокументыРасширеннаяПодсказка" id="38"/>
+					</Button>
 				</ChildItems>
 			</Popup>
 			<Popup name="грАдминистрирование" id="9">
@@ -378,6 +383,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НастройкаСистемы</Action>
+		</Command>
+		<Command name="ВсеДокументы" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Все документы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Все документы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВсеДокументы</Action>
 		</Command>
 	</Commands>
 </Form>
