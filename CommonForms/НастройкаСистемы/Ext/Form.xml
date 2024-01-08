@@ -6,33 +6,112 @@
 		<Event name="AfterWrite">ПослеЗаписи</Event>
 	</Events>
 	<ChildItems>
-		<InputField name="ПланировщикЗадачВремяС" id="4">
-			<DataPath>НаборКонстант.ПланировщикЗадачВремяС</DataPath>
-			<ContextMenu name="ПланировщикЗадачВремяСКонтекстноеМеню" id="5"/>
-			<ExtendedTooltip name="ПланировщикЗадачВремяСРасширеннаяПодсказка" id="6"/>
-		</InputField>
-		<InputField name="ПланировщикЗадачВремяПо" id="7">
-			<DataPath>НаборКонстант.ПланировщикЗадачВремяПо</DataPath>
-			<ContextMenu name="ПланировщикЗадачВремяПоКонтекстноеМеню" id="8"/>
-			<ExtendedTooltip name="ПланировщикЗадачВремяПоРасширеннаяПодсказка" id="9"/>
-		</InputField>
-		<CheckBoxField name="ВыводитьЗаголовокПланировщикаЗадач" id="1">
-			<DataPath>НаборКонстант.ВыводитьЗаголовокПланировщикаЗадач</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<CheckBoxType>Auto</CheckBoxType>
-			<ContextMenu name="ВыводитьЗаголовокПланировщикаЗадачКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="ВыводитьЗаголовокПланировщикаЗадачРасширеннаяПодсказка" id="3"/>
-		</CheckBoxField>
-		<InputField name="НижняяГраницаНапоминанийОСтатусахЗанятий" id="10">
-			<DataPath>НаборКонстант.НижняяГраницаНапоминанийОСтатусахЗанятий</DataPath>
-			<ContextMenu name="НижняяГраницаНапоминанийОСтатусахЗанятийКонтекстноеМеню" id="11"/>
-			<ExtendedTooltip name="НижняяГраницаНапоминанийОСтатусахЗанятийРасширеннаяПодсказка" id="12"/>
-		</InputField>
-		<InputField name="РазмерШрифтаТекстаПланировщика" id="13">
-			<DataPath>НаборКонстант.РазмерШрифтаТекстаПланировщика</DataPath>
-			<ContextMenu name="РазмерШрифтаТекстаПланировщикаКонтекстноеМеню" id="14"/>
-			<ExtendedTooltip name="РазмерШрифтаТекстаПланировщикаРасширеннаяПодсказка" id="15"/>
-		</InputField>
+		<Pages name="грСтраницы" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Гр страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="грСтраницыРасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<Page name="Основные" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Основные</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Основные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОсновныеРасширеннаяПодсказка" id="19"/>
+					<ChildItems>
+						<InputField name="ПланировщикЗадачВремяС" id="4">
+							<DataPath>НаборКонстант.ПланировщикЗадачВремяС</DataPath>
+							<ContextMenu name="ПланировщикЗадачВремяСКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ПланировщикЗадачВремяСРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="ПланировщикЗадачВремяПо" id="7">
+							<DataPath>НаборКонстант.ПланировщикЗадачВремяПо</DataPath>
+							<ContextMenu name="ПланировщикЗадачВремяПоКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ПланировщикЗадачВремяПоРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<CheckBoxField name="ВыводитьЗаголовокПланировщикаЗадач" id="1">
+							<DataPath>НаборКонстант.ВыводитьЗаголовокПланировщикаЗадач</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВыводитьЗаголовокПланировщикаЗадачКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ВыводитьЗаголовокПланировщикаЗадачРасширеннаяПодсказка" id="3"/>
+						</CheckBoxField>
+						<InputField name="НижняяГраницаНапоминанийОСтатусахЗанятий" id="10">
+							<DataPath>НаборКонстант.НижняяГраницаНапоминанийОСтатусахЗанятий</DataPath>
+							<ContextMenu name="НижняяГраницаНапоминанийОСтатусахЗанятийКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="НижняяГраницаНапоминанийОСтатусахЗанятийРасширеннаяПодсказка" id="12"/>
+						</InputField>
+						<InputField name="РазмерШрифтаТекстаПланировщика" id="13">
+							<DataPath>НаборКонстант.РазмерШрифтаТекстаПланировщика</DataPath>
+							<ContextMenu name="РазмерШрифтаТекстаПланировщикаКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="РазмерШрифтаТекстаПланировщикаРасширеннаяПодсказка" id="15"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ChatGPT" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ChatGPT</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Основные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ChatGPTРасширеннаяПодсказка" id="21"/>
+					<ChildItems>
+						<InputField name="ИмяСервераGPT" id="22">
+							<DataPath>НаборКонстант.АдресСервераGPT</DataPath>
+							<ContextMenu name="ИмяСервераGPTКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ИмяСервераGPTРасширеннаяПодсказка" id="24"/>
+						</InputField>
+						<InputField name="ТокенАвторизацииGPT" id="25">
+							<DataPath>НаборКонстант.ТокенАвторизацииGPT</DataPath>
+							<ContextMenu name="ТокенАвторизацииGPTКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ТокенАвторизацииGPTРасширеннаяПодсказка" id="27"/>
+						</InputField>
+						<InputField name="ТаймаутGPT" id="28">
+							<DataPath>НаборКонстант.ТаймаутGPT</DataPath>
+							<ContextMenu name="ТаймаутGPTКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ТаймаутGPTРасширеннаяПодсказка" id="30"/>
+						</InputField>
+						<CheckBoxField name="НеВыводитьСлучайныеПожелания" id="34">
+							<DataPath>НаборКонстант.НеВыводитьСлучайныеПожелания</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НеВыводитьСлучайныеПожеланияКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="НеВыводитьСлучайныеПожеланияРасширеннаяПодсказка" id="36"/>
+						</CheckBoxField>
+						<CheckBoxField name="НеВыводитьСлучайныеФакты" id="31">
+							<DataPath>НаборКонстант.НеВыводитьСлучайныеФакты</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НеВыводитьСлучайныеФактыКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="НеВыводитьСлучайныеФактыРасширеннаяПодсказка" id="33"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="НаборКонстант" id="1">

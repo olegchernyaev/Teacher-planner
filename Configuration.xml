@@ -28,7 +28,7 @@
 			</xr:ContainedObject>
 			<xr:ContainedObject>
 				<xr:ClassId>fb282519-d103-4dd3-bc12-cb271d631dfc</xr:ClassId>
-				<xr:ObjectId>bf87453e-040f-4b4c-9660-fec4e6ce76b3</xr:ObjectId>
+				<xr:ObjectId>e1b2d5b2-3069-44d7-83b8-d4d74eda3c0f</xr:ObjectId>
 			</xr:ContainedObject>
 		</InternalInfo>
 		<Properties>
@@ -246,6 +246,7 @@
 		</Properties>
 		<ChildObjects>
 			<Language>English</Language>
+			<Subsystem>РаботаСGPT</Subsystem>
 			<CommonPicture>Оплачено</CommonPicture>
 			<CommonPicture>НеОплачено</CommonPicture>
 			<CommonPicture>Пустая</CommonPicture>
@@ -261,6 +262,7 @@
 			<CommonModule>ОбщегоНазначенияКлиентСервер</CommonModule>
 			<CommonModule>РаботаСДокументамиВызовСервера</CommonModule>
 			<CommonModule>ДополнительныйВызовСервера</CommonModule>
+			<CommonModule>РаботаСGPT</CommonModule>
 			<CommonAttribute>Комментарий</CommonAttribute>
 			<CommonCommand>СтруктураПодчиненности</CommonCommand>
 			<Constant>ВыводитьЗаголовокПланировщикаЗадач</Constant>
@@ -268,6 +270,11 @@
 			<Constant>ПланировщикЗадачВремяПо</Constant>
 			<Constant>НижняяГраницаНапоминанийОСтатусахЗанятий</Constant>
 			<Constant>РазмерШрифтаТекстаПланировщика</Constant>
+			<Constant>АдресСервераGPT</Constant>
+			<Constant>ТокенАвторизацииGPT</Constant>
+			<Constant>ТаймаутGPT</Constant>
+			<Constant>НеВыводитьСлучайныеФакты</Constant>
+			<Constant>НеВыводитьСлучайныеПожелания</Constant>
 			<CommonForm>ГруппаКнопокНачальнойСтраницы</CommonForm>
 			<CommonForm>ФормаСтруктурыПодчиненности</CommonForm>
 			<CommonForm>ВвестиДатуФормат</CommonForm>
@@ -285,6 +292,7 @@
 			<Catalog>ПотенциальныеКлиенты</Catalog>
 			<Catalog>ТемыПочтовыхРассылок</Catalog>
 			<Catalog>События</Catalog>
+			<Catalog>МетодыGPT</Catalog>
 			<Document>Занятия</Document>
 			<Document>УстановкаЦенЗанятий</Document>
 			<Document>ПодтверждениеЗанятия</Document>
@@ -312,6 +320,9 @@
 			<InformationRegister>СтатусыЗанятий</InformationRegister>
 			<InformationRegister>РасценкиЗанятий</InformationRegister>
 			<InformationRegister>ОтправленныеСообщения</InformationRegister>
+			<InformationRegister>НастройкиВызоваМетодовGPT</InformationRegister>
+			<InformationRegister>СлучайныеПожелания</InformationRegister>
+			<InformationRegister>СлучайныеФакты</InformationRegister>
 			<AccumulationRegister>Продажи</AccumulationRegister>
 			<AccumulationRegister>ОплатаЗанятий</AccumulationRegister>
 			<Task>ОбщиеЗадачи</Task>
